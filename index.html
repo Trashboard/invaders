@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/underscore.js"></script>
+    <script src="/js/grid.js"></script>
+    <script src="/js/game.js"></script>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        cursor: none;
+        background-color: black;
+      }
+
+      .game {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: black;
+        width: 660px;
+        height: 512px;
+      }
+
+      .invaders {
+        overflow: hidden;
+        position: absolute;
+      }
+
+      .invaders canvas {
+        position: absolute;
+      }
+
+      .ship {
+        position: absolute;
+        top: 450px;
+        left: 300px;
+      }
+
+      .bullet {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-left: -1px;
+        margin-top: -8px;
+        width: 2px;
+        height: 8px;
+        background-color: white;
+        z-index: 2;
+      }
+
+      canvas.mask {
+        z-index: 1;
+      }
+
+      canvas.highscore {
+        position: absolute;
+        right: 50px;
+        top: 40px;
+      }
+
+      canvas.score {
+        position: absolute;
+        left: 50px;
+        top: 40px;
+      }
+
+      img.hiscore-label {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+      }
+
+      img.score-label {
+        position: absolute;
+        left: 20px;
+        top: 15px;
+      }
+
+      img.footer {
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="game">
+      <img src="/assets/hiscore.png" class="hiscore-label" />
+      <img src="/assets/score.png" class="score-label" />
+      <img src="/assets/footer.png" class="footer" />
+      <div class="invaders">
+      </div>
+      <img src="/assets/ship.png" class="ship" />
+    </div>
+  </body>
+</html>
